@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title%}Record Store{% endblock title %}
+{% load static %}
+
+{% block content  %}
+		   
+<p class="my-3 h5">Bienvenido a tu tienda de discos preferida</p>
+<p class="mb-3 h5">Por: Josue Zambrano</p>
+
+<div class="container-fluid">
+	<div class="container mt-5">
+	  <div class="row">
+		  <div class="col-md-6 mb-4">
+			  <a href="{% url 'album_manager:artist' %}" class="text-decoration-none">
+				  <div class="card text-center" style="height: 400px;">
+					  <img src="{% static 'images/artists.webp' %}" class="card-img-top" style="height: 300px;" alt="Artistas">
+					  <div class="card-body">
+						  <h5 class="card-title h3">Artistas</h5>
+						  <p class="card-text">Accede a la secci&oacute;n de artistas.</p>
+						  <span class="stretched-link"></span>
+					  </div>
+				  </div>
+			  </a>
+		  </div>
+		  <div class="col-md-6 mb-4">
+			  <a href="{% url 'album_manager:album' %}" class="text-decoration-none">
+				  <div class="card text-center" style="height: 400px;">
+					  <img src="{% static 'images/albums.webp' %}" class="card-img-top" style="height: 300px;" alt="Albumes">
+					  <div class="card-body">
+						  <h5 class="card-title h3">&Aacute;lbumes</h5>
+						  <p class="card-text">Accede a la secci&oacute;n de &aacute;lbumes.</p>
+						  <span class="stretched-link"></span>
+					  </div>
+				  </div>
+			  </a>
+		  </div>
+	  </div>
+  </div>
+</div>
+
+{% endblock content %}
